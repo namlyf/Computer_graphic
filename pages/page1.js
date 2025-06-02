@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 
-
 // Map settings
 const trackRadius = 200;
 const trackWidth = 35;
@@ -55,7 +54,6 @@ const config = {
 
 const playerAngleInitial = Math.PI;
 let playerAngleMoved;
-let playerAngleMoved1;
 let lastTimestamp = null;
 let isPaused = false;
 
@@ -220,7 +218,6 @@ function getLineMarkings(mapWidth, mapHeight) {
 
   // Arccross
   context.setLineDash([]);
-  //arcinner
   context.lineWidth = 3;
   context.strokeStyle = '#E0FFFF';
 
@@ -234,6 +231,7 @@ function getLineMarkings(mapWidth, mapHeight) {
 
   return new THREE.CanvasTexture(canvas);
 }
+
 function getLeftIsland() {
   const islandLeft = new THREE.Shape();
 
@@ -466,7 +464,6 @@ function movePlayerCar(timeDelta) {
 }
 function reset() {
   playerAngleMoved = 0;
-  playerAngleMoved1 = 0;
   lastTimestamp = undefined;
   movePlayerCar(0);
   renderer.render(scene, camera);
@@ -494,11 +491,7 @@ window.addEventListener('resize', () => {
 });
 
 
-
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 controls.screenSpacePanning = false;
-// controls.minDistance = 50;
-// controls.maxDistance = 500;
-// controls.maxPolarAngle = Math.PI / 2;
