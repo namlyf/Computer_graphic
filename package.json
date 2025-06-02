@@ -1,0 +1,18 @@
+{
+  "name": "finalprojecttempalte",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dinh-van.nguyen",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "three": "^0.171.0",
+    "three-orbitcontrols": "^2.110.3"
+  },
+  "devDependencies": {
+    "vite": "^6.2.2"
+  }
+}
